@@ -18,3 +18,5 @@ Route::get('hello/:name', 'index/hello');
 Route::get('ali', 'index/ali');
 Route::get('scanner', 'index/scanner');
 Route::get('obj', 'index/obj');
+Route::get('ini', 'index/ini');
+
