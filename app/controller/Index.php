@@ -42,4 +42,21 @@ class Index extends BaseController
         $obj['key'] = '1';
         var_dump($obj['key'], $obj['title']);
     }
+
+    public function ini()
+    {
+        $title = \Yaconf::get('abc.title');
+        var_dump($title);
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
