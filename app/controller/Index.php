@@ -51,12 +51,9 @@ class Index extends BaseController
 
     public function yaml()
     {
-        $file = yaml_parse_file('../../config/xxm.yaml');
+        $file = yaml_parse_file("../config/xxm.yaml");
         var_dump($file);
     }
-
-
-
 
 
 
