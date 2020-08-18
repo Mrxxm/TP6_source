@@ -10,3 +10,5 @@ ThinkPHP 6.0
 * Yaconf使用
 
 * Config加载分析
+
+* Config(yaml、)
