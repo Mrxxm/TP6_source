@@ -3,6 +3,7 @@ namespace app\controller;
 
 use ali\Send;
 use app\BaseController;
+use designMode\Single;
 use Mrxxm\Scanner\Scanner;
 
 class Index extends BaseController
@@ -56,7 +57,11 @@ class Index extends BaseController
     }
 
 
-
+    public function single()
+    {
+        $obj = Single::getInstance();
+        var_dump($obj->test());
+    }
 
 
 
