@@ -20,5 +20,7 @@ Route::get('scanner', 'index/scanner');
 Route::get('obj', 'index/obj');
 Route::get('ini', 'index/ini');
 Route::get('yaml', 'index/yaml');
+Route::get('single', 'index/single');
+
 
 
