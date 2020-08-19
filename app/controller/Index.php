@@ -88,4 +88,11 @@ class Index extends BaseController
         echo $xxm->buy($bmw);
     }
 
+    // 反射机制
+    public function rel()
+    {
+        $obj = (new \ReflectionClass('RegisterA'))->newInstanceArgs();
+        echo $obj->ref(1, 2);
+    }
+
 }
