@@ -21,6 +21,8 @@ Route::get('obj', 'index/obj');
 Route::get('ini', 'index/ini');
 Route::get('yaml', 'index/yaml');
 Route::get('single', 'index/single');
+Route::get('register', 'index/register');
+
 
 
 
