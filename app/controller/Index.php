@@ -3,6 +3,7 @@ namespace app\controller;
 
 use ali\Send;
 use app\BaseController;
+use designMode\Register;
 use designMode\Single;
 use Mrxxm\Scanner\Scanner;
 
@@ -61,6 +62,16 @@ class Index extends BaseController
     {
         $obj = Single::getInstance();
         var_dump($obj->test());
+    }
+
+    public function register()
+    {
+        $a = new \RegisterA();
+        Register::set('xxm', $a);
+
+        $result = Register::get('xxm')->abc();
+
+        var_dump($result);
     }
 
 
