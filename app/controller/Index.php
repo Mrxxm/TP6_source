@@ -151,4 +151,11 @@ class Index extends BaseController
         dump($pObj->buy());
     }
 
+    // Countable
+    public function countable()
+    {
+        $obj = new \CountableA();
+        echo count($obj);
+    }
+
 }
