@@ -7,4 +7,9 @@ class RegisterA
     {
         return 'abc';
     }
+
+    public function ref($a, $b)
+    {
+        return $a . $b;
+    }
 }
