@@ -25,6 +25,8 @@ Route::get('register', 'index/register');
 Route::get('personBuy', 'index/personBuy');
 Route::get('rel', 'index/rel');
 Route::get('rel2', 'index/rel2');
+Route::get('container', 'index/container');
+Route::get('containerRef', 'index/containerRef');
 
 
 
