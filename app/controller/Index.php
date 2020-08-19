@@ -5,6 +5,8 @@ use ali\Send;
 use app\BaseController;
 use designMode\Register;
 use designMode\Single;
+use DI\Car;
+use DI\Person;
 use Mrxxm\Scanner\Scanner;
 
 class Index extends BaseController
@@ -78,6 +80,12 @@ class Index extends BaseController
         var_dump($result);
     }
 
-
+    // 依赖注入
+    public function personBuy()
+    {
+        $xxm = new Person();
+        $bmw = new Car();
+        echo $xxm->buy($bmw);
+    }
 
 }
