@@ -104,4 +104,16 @@ class Index extends BaseController
         echo $obj->ref(1, 2);
     }
 
+    // 反射机制
+    public function rel2()
+    {
+        $obj = (new \ReflectionClass('RegisterA'));
+        // 方法一()
+//        $obj = $obj->newInstance();
+//        echo $obj->ref(1, 2);
+        // 方法二
+//        $method = $obj->getMethod('ref');
+//        echo $method->invokeArgs($obj->newInstance(), ['mmm', '222']);
+    }
+
 }
