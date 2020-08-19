@@ -114,6 +114,18 @@ class Index extends BaseController
         // 方法二
 //        $method = $obj->getMethod('ref');
 //        echo $method->invokeArgs($obj->newInstance(), ['mmm', '222']);
+
+        // 判断方法的权限
+        $method = (new \ReflectionMethod($obj->newInstance(), 'ref'));
+        if ($method->isPublic()) {
+            echo "ref是公共方法";
+        } elseif ($method->isProtected()) {
+            echo "ref是保护方法";
+        } elseif ($method->isPrivate()) {
+            echo "ref是私有方法";
+        } else {
+            echo "敲里吗";
+        }
     }
 
 }
