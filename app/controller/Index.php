@@ -126,6 +126,8 @@ class Index extends BaseController
         } else {
             echo "敲里吗";
         }
+        dump($method->getParameters()); // 获取参数
+        dump($method->getNumberOfParameters()); // 获取参数个数
     }
 
 }
