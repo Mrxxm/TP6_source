@@ -6,6 +6,7 @@ use app\BaseController;
 use designMode\Register;
 use designMode\Single;
 use DI\Car;
+use DI\Container;
 use DI\Person;
 use Mrxxm\Scanner\Scanner;
 
@@ -128,6 +129,24 @@ class Index extends BaseController
         }
         dump($method->getParameters()); // 获取参数
         dump($method->getNumberOfParameters()); // 获取参数个数
+    }
+
+    public function container()
+    {
+        Container::getInstance()->set('person', new Person(new Car()));
+        Container::getInstance()->set('car', new Car());
+
+        $pObj = Container::getInstance()->get('person');
+        $cObj = Container::getInstance()->get('car');
+        dump($pObj->buy());
+    }
+
+    public function containerRef()
+    {
+        Container::getInstance()->set('person', '\DI\Person');
+        $pObj = Container::getInstance()->get('person');
+
+        dump($pObj->buy());
     }
 
 }
