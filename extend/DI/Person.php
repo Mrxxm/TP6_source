@@ -12,7 +12,6 @@ class Person
      */
     public function buy($obj)
     {
-//        $bmw = new Car();
         return $obj->pay();
     }
 }
