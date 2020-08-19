@@ -131,6 +131,7 @@ class Index extends BaseController
         dump($method->getNumberOfParameters()); // 获取参数个数
     }
 
+    // 容器
     public function container()
     {
         Container::getInstance()->set('person', new Person(new Car()));
@@ -141,6 +142,7 @@ class Index extends BaseController
         dump($pObj->buy());
     }
 
+    // 容器-反射
     public function containerRef()
     {
         Container::getInstance()->set('person', '\DI\Person');
