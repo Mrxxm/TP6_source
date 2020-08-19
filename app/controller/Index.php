@@ -38,6 +38,7 @@ class Index extends BaseController
         return json($result);
     }
 
+    // 加载
     public function obj()
     {
         $obj = new \ObjArray();
@@ -45,25 +46,28 @@ class Index extends BaseController
         var_dump($obj['key'], $obj['title']);
     }
 
+    // yaconf
     public function ini()
     {
         $title = \Yaconf::get('abc.title');
         var_dump($title);
     }
 
+    // yaml
     public function yaml()
     {
         $file = yaml_parse_file("../config/xxm.yaml");
         var_dump($file);
     }
 
-
+    // 单例
     public function single()
     {
         $obj = Single::getInstance();
         var_dump($obj->test());
     }
 
+    // 注册树
     public function register()
     {
         $a = new \RegisterA();
