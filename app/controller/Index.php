@@ -9,6 +9,7 @@ use DI\Car;
 use DI\Container;
 use DI\Person;
 use Mrxxm\Scanner\Scanner;
+use think\facade\Config;
 
 class Index extends BaseController
 {
@@ -156,6 +157,19 @@ class Index extends BaseController
     {
         $obj = new \CountableA();
         echo count($obj);
+    }
+    
+    public function container1()
+    {
+        // 方法一
+//        $config = new Config();
+//        dump($config::get("app"));
+        // 方法二
+//        $config = app('config');
+//        dump($config->get('app'));
+        // 方法三
+//        $config = \think\Container::getInstance()->get('config')->get('app');
+//        dump($config);
     }
 
 }
