@@ -24,11 +24,13 @@ class Index extends BaseController
         return 'hello,' . $name;
     }
 
+    // 类自动加载-自定义文件夹类
     public function ali()
     {
         return Send::push();
     }
 
+    // 自定义composer包-手动加载
     public function scanner()
     {
         $urls = [
@@ -43,7 +45,7 @@ class Index extends BaseController
         return json($result);
     }
 
-    // 加载
+    // ArrayAccess
     public function obj()
     {
         $obj = new \ObjArray();
@@ -65,14 +67,14 @@ class Index extends BaseController
         var_dump($file);
     }
 
-    // 单例
+    // 单例模式
     public function single()
     {
         $obj = Single::getInstance();
         var_dump($obj->test());
     }
 
-    // 注册树
+    // 注册树模式
     public function register()
     {
         $a = new \RegisterA();
@@ -159,7 +161,8 @@ class Index extends BaseController
         $obj = new \CountableA();
         echo count($obj);
     }
-    
+
+    // 容器获取实例
     public function container1()
     {
         // 方法一
@@ -173,7 +176,7 @@ class Index extends BaseController
 //        dump($config);
     }
 
-
+    // 门面模式
     public function facade()
     {
         // 方法一
