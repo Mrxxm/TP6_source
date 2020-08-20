@@ -3,6 +3,7 @@ namespace app\controller;
 
 use ali\Send;
 use app\BaseController;
+use app\common\XxmFacade;
 use designMode\Register;
 use designMode\Single;
 use DI\Car;
@@ -172,4 +173,16 @@ class Index extends BaseController
 //        dump($config);
     }
 
+
+    public function facade()
+    {
+        // 方法一
+        $obj = new XxmFacade();
+        dump($obj->test());
+        // 方法二
+        dump( \app\facade\XxmFacade::test());  // 有getFacadeClass方法
+        // 方法三
+        bind('app\facade\XxmFacade2', 'app\common\XxmFacade2');
+        dump( \app\facade\XxmFacade2::test()); // 无getFacadeClass方法
+    }
 }
