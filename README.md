@@ -11,4 +11,6 @@ ThinkPHP 6.0
 
 * Config加载分析
 
-* Config(yaml、)
+* Config(yaml)
+
+![](https://img1.doubanio.com/view/photo/l/public/p2617825799.jpg)
