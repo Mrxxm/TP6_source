@@ -28,6 +28,8 @@ Route::get('rel2', 'index/rel2');
 Route::get('container', 'index/container');
 Route::get('containerRef', 'index/containerRef');
 Route::get('countable', 'index/countable');
+Route::get('container1', 'index/container1');
+
 
 
 
