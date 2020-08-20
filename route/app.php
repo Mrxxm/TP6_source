@@ -29,6 +29,8 @@ Route::get('container', 'index/container');
 Route::get('containerRef', 'index/containerRef');
 Route::get('countable', 'index/countable');
 Route::get('container1', 'index/container1');
+Route::get('facade', 'index/facade');
+
 
 
 
