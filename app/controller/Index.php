@@ -188,4 +188,10 @@ class Index extends BaseController
         bind('app\facade\XxmFacade2', 'app\common\XxmFacade2');
         dump( \app\facade\XxmFacade2::test()); // 无getFacadeClass方法
     }
+
+    // bind自定义类通过容器获取
+    public function provider()
+    {
+        var_dump(app('xxmProvider')->test());
+    }
 }
