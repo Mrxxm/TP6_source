@@ -30,6 +30,8 @@ Route::get('containerRef', 'index/containerRef'); // 容器-反射
 Route::get('countable', 'index/countable'); // Countable
 Route::get('container1', 'index/container1'); // 容器获取实例
 Route::get('facade', 'index/facade'); // 门面模式
+Route::get('provider', 'index/provider'); // 门面模式
+
 
 
 
