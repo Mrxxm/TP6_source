@@ -11,9 +11,9 @@
 use think\facade\Route;
 
 
-Route::resource('blog', 'Blog'); // 资源路由
-Route::get('/hello/:name', 'index/hello')->ext('html');
-Route::get('/hello/[:name]', 'index/hello'); // name参数可选
+Route::resource('blog', 'res'); // 资源路由
+Route::get('/hello/:name', 'index/hello')->ext('html')->pattern(['name' => '\d+']);
+Route::get('/hello2/[:name]', 'index/hello2'); // name参数可选
 Route::get('ali', 'index/ali'); // 类自动加载-自定义文件夹类
 Route::get('scanner', 'index/scanner'); // 自定义composer包-手动加载
 Route::get('obj', 'index/obj'); // ArrayAccess
@@ -30,7 +30,6 @@ Route::get('countable', 'index/countable'); // Countable
 Route::get('container1', 'index/container1'); // 容器获取实例
 Route::get('facade', 'index/facade'); // 门面模式
 Route::get('provider', 'index/provider'); // 门面模式
-
 
 
 
