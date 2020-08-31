@@ -24,6 +24,11 @@ class Index extends BaseController
         return 'hello,' . $name;
     }
 
+    public function hello2($name = 'ThinkPHP6')
+    {
+        return 'hello,' . $name;
+    }
+
     // 类自动加载-自定义文件夹类
     public function ali()
     {
