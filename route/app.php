@@ -10,10 +10,12 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-
+// 路由章节测试路由
 Route::resource('blog', 'res'); // 资源路由
 Route::get('/hello/:name', 'index/hello')->ext('html')->pattern(['name' => '\d+']);
 Route::get('/hello2/[:name]', 'index/hello2'); // name参数可选
+
+
 Route::get('ali', 'index/ali'); // 类自动加载-自定义文件夹类
 Route::get('scanner', 'index/scanner'); // 自定义composer包-手动加载
 Route::get('obj', 'index/obj'); // ArrayAccess
