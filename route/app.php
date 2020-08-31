@@ -10,11 +10,10 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
-});
 
-Route::get('hello/:name', 'index/hello');
+Route::resource('blog', 'Blog'); // 资源路由
+Route::get('/hello/:name', 'index/hello')->ext('html');
+Route::get('/hello/[:name]', 'index/hello'); // name参数可选
 Route::get('ali', 'index/ali'); // 类自动加载-自定义文件夹类
 Route::get('scanner', 'index/scanner'); // 自定义composer包-手动加载
 Route::get('obj', 'index/obj'); // ArrayAccess
